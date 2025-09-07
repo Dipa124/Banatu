@@ -1,7 +1,7 @@
 [project]
 name = "banatu"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gestor de división de gastos en grupos."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

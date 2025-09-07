@@ -1,0 +1,97 @@
+{
+  "personas": [
+    {
+      "nombre": "Ana",
+      "deudas": [
+        { "Cuantia": 12.5, "Destinatario": "Luis", "Descripcion": "Cena italiana" },
+        { "Cuantia": 3.75, "Destinatario": "Marta", "Descripcion": "Taxi aeropuerto" }
+      ]
+    },
+    {
+      "nombre": "Luis",
+      "deudas": [
+        { "Cuantia": 6.2, "Destinatario": "Ana", "Descripcion": "Supermercado" },
+        { "Cuantia": 4.0, "Destinatario": "Carlos", "Descripcion": "Cerveza concierto" }
+      ]
+    },
+    {
+      "nombre": "Marta",
+      "deudas": [
+        { "Cuantia": 8.0, "Destinatario": "Luis", "Descripcion": "Entradas cine" },
+        { "Cuantia": 2.5, "Destinatario": "Elena", "Descripcion": "Café desayuno" }
+      ]
+    },
+    {
+      "nombre": "Carlos",
+      "deudas": [
+        { "Cuantia": 7.3, "Destinatario": "Ana", "Descripcion": "Pizza" },
+        { "Cuantia": 5.0, "Destinatario": "Elena", "Descripcion": "Gasolina coche" }
+      ]
+    },
+    {
+      "nombre": "Elena",
+      "deudas": [
+        { "Cuantia": 4.25, "Destinatario": "Marta", "Descripcion": "Postres" },
+        { "Cuantia": 6.6, "Destinatario": "Luis", "Descripcion": "Tarta cumpleaños" }
+      ]
+    }
+  ],
+  "gastos": [
+    {
+      "descripcion": "Cena italiana",
+      "cuantia": 50.0,
+      "pagador": "Luis",
+      "deudores": ["Ana", "Luis", "Marta", "Carlos", "Elena"]
+    },
+    {
+      "descripcion": "Taxi aeropuerto",
+      "cuantia": 15.0,
+      "pagador": "Marta",
+      "deudores": ["Ana", "Marta"]
+    },
+    {
+      "descripcion": "Supermercado",
+      "cuantia": 24.8,
+      "pagador": "Ana",
+      "deudores": ["Luis", "Ana", "Elena"]
+    },
+    {
+      "descripcion": "Entradas cine",
+      "cuantia": 32.0,
+      "pagador": "Luis",
+      "deudores": ["Marta", "Luis", "Carlos"]
+    },
+    {
+      "descripcion": "Cerveza concierto",
+      "cuantia": 12.0,
+      "pagador": "Carlos",
+      "deudores": ["Luis", "Carlos", "Ana"]
+    },
+    {
+      "descripcion": "Pizza",
+      "cuantia": 21.9,
+      "pagador": "Ana",
+      "deudores": ["Carlos", "Ana", "Elena"]
+    },
+    {
+      "descripcion": "Gasolina coche",
+      "cuantia": 20.0,
+      "pagador": "Elena",
+      "deudores": ["Carlos", "Elena", "Marta"]
+    },
+    {
+      "descripcion": "Postres",
+      "cuantia": 17.0,
+      "pagador": "Marta",
+      "deudores": ["Elena", "Marta", "Ana"]
+    },
+    {
+      "descripcion": "Tarta cumpleaños",
+      "cuantia": 19.8,
+      "pagador": "Luis",
+      "deudores": ["Elena", "Luis", "Carlos", "Ana"]
+    }
+  ],
+  "codigo_ISO": "EUR",
+  "moneda": "€"
+}

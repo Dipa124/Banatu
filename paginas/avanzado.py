@@ -1,7 +1,11 @@
+import json
 import streamlit as st
+from pathlib import Path
 
 from utils import exportar_datos, importar_datos
 from utils import limpiar_session_state, wait_notificaciones
+
+RUTA_DATOS_EJEMPLO = Path(__file__).resolve().parent.parent / "datos" / "datos_ejemplo.json"
 
 
 def pagina_avanzado():
@@ -77,3 +81,15 @@ def pagina_avanzado():
         limpiar_session_state()
         st.error("Todos los datos han sido eliminados.", icon="❌")
         wait_notificaciones()
+
+    boton_datos_ejemplo = st.button("📚 Cargar datos de ejemplo")
+    if boton_datos_ejemplo:
+        with open(RUTA_DATOS_EJEMPLO, "r", encoding="utf-8") as f:
+            datos_ejemplo = json.load(f)
+        importados = importar_datos(datos_ejemplo)
+        if importados:
+            st.success(f"¡Datos de ejemplo cargados correctamente!", icon="✅")
+            wait_notificaciones()
+        else:
+            st.error("No se ha podido cargar los datos de ejemplo.", icon="❌")
+            wait_notificaciones()

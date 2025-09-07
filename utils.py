@@ -160,7 +160,10 @@ def importar_datos(json_datos):
         limpiar_session_state()
         Persona.registro = []
 
-        datos = load(json_datos)
+        if type(json_datos) != dict:
+            datos = load(json_datos)
+        else:
+            datos = json_datos
 
         for persona in datos["personas"]:
             persona = Persona(persona["nombre"])
@@ -178,7 +181,8 @@ def importar_datos(json_datos):
         st.session_state.moneda = datos["moneda"]
 
         return True
-    except:
+    except Exception as e:
+        print(e)
         return False
 
 
